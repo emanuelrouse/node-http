@@ -1,7 +1,10 @@
-const http = require('http'); // require http core module
+const http = require('http'); // import http(core) module
 
 const hostname = 'localhost'; // set hostname to localhost
 const port = 3000; // set the port number to 3000
+
+const path = require('path'); // import path(core) module
+const fs = require('fs');  // import fs(core) module
 
 const server = http.createServer((req, res) => {
     console.log(req.headers);
@@ -11,4 +14,5 @@ const server = http.createServer((req, res) => {
 });
 // create a new instance of the Http.Server class
 server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`)});
+
